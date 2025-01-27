@@ -1,0 +1,123 @@
+*,
+h1 {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: rgb(40, 42, 54);
+  font-size: 1.6rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  padding: 5vh;
+  text-align: center;
+  font-family: "Lexend Giga";
+}
+
+header {
+  user-select: none;
+}
+header p {
+  font-style: italic;
+  animation: fadeInAndOut 2s infinite;
+}
+
+@media screen and (max-width: 444px) {
+  header {
+    font-size: 1.3rem;
+  }
+}
+
+#color-grid {
+  width: clamp(300px, 35vw, 672px);
+  aspect-ratio: 1/1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 3%;
+}
+.color {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+.color:active {
+  transform: scale(0.9);
+}
+.red {
+  background: rgb(255, 101, 101);
+  border-top-left-radius: 20%;
+}
+.red:hover {
+  background: rgb(184, 73, 73);
+}
+.green {
+  background: rgb(84, 255, 84);
+  border-top-right-radius: 20%;
+}
+.green:hover {
+  background: rgb(59, 179, 59);
+}
+.blue {
+  background: dodgerblue;
+  border-bottom-left-radius: 20%;
+}
+.blue:hover {
+  background: rgb(24, 110, 196);
+}
+.yellow {
+  background: rgb(255, 255, 59);
+  border-bottom-right-radius: 20%;
+}
+.yellow:hover {
+  background: rgb(182, 182, 44);
+}
+
+body > p:last-of-type {
+  font-family: "Gloria Hallelujah";
+}
+
+.flash {
+  animation: flash 0.5s;
+}
+
+.hide {
+  visibility: hidden;
+}
+
+.red-text {
+  color: rgb(255, 0, 0);
+}
+
+@keyframes fadeInAndOut {
+  0% {
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+  }
+}
+@keyframes flash {
+  0% {
+  }
+  1% {
+    filter: saturate(6);
+    box-shadow: 0 0 30px 10px;
+  }
+  30% {
+    filter: saturate(6);
+    box-shadow: 0 0 30px 10px;
+  }
+  100% {
+  }
+}
